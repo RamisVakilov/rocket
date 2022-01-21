@@ -241,7 +241,7 @@
           
         </div>
     </div>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
     <script src="/dist/js/index.js"></script>
     <script src="/src/js/ajax.js"></script>
 </body>
