@@ -1,0 +1,8 @@
+@mixin flex_row_between($gap){
+    display: flex;
+    justify-content: space-between;
+    gap: $gap;
+    align-items: center;
+}
+
+    

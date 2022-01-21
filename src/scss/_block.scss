@@ -1,0 +1,30 @@
+.over{
+    overflow-y:hidden;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+header,nav.nav,.promo, .footer{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @media (max-width:1140px){
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+}
+nav.nav{
+     padding-top: 12px;
+     padding-bottom: 10px;
+}
+.promo{
+    
+    @media (max-width:430px){
+        padding-bottom: 20vw;
+        margin-top: 4vw;
+    }
+}

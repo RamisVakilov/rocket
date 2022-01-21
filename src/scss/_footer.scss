@@ -1,0 +1,42 @@
+.footer{
+    margin-top: 98px;
+    @media (max-width:1140px){
+        margin-top: 10vw;
+       
+    }
+    background-color: #08664F;
+    .container{
+        @include flex_row_between(0px);
+        height: 144px;
+        @media(max-width:850px){
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4vw;
+            height: auto;
+            box-sizing: content-box;
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+        }
+    }
+    &__logo{
+        width: 91px;
+        height: 27px; 
+        @media(max-width:850px){
+            width: 62px;
+            height: 18px;
+        }
+    }
+    &__nav{
+         @media(max-width:850px){
+            .nav__items{
+                width: 100%;
+                flex-wrap: wrap;
+                @include flex_row_between(3.5vw);
+                justify-content: center;
+            }
+        }
+    }
+    &__social{
+        @include flex_row_between(15px);
+    }
+}

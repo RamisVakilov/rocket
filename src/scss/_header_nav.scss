@@ -1,0 +1,190 @@
+.header__topnav{//логотип и адрес
+    @media (max-width:430px){
+        display: none;
+    }
+    display:flex;
+    justify-content: space-between;
+    @media (max-width:700px){
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2vh;
+    }
+      
+    // Логотип
+    &_logo{
+        @include flex_row_between(1.5vw);
+            a.meta__link{
+            @include flex_row_between(0.5vw);
+            
+            .wrap{
+                .meta__link-sity{
+                    font-size: 14px;
+                    color: $color;
+                }
+                .meta__link-street{
+                    
+                    font-size: 14px;
+                    color: #868686; 
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    &_contacts{//телефон и запись
+        @media (max-width:700px){
+            width: 100%;
+            justify-content: center;
+        }
+        @include flex_row_between(2vw);
+        .contacts_link{
+            @include flex_row_between(0.5vw);
+            color: $color;
+            line-height: 28px;
+        }
+    }
+}
+.button__signup{//Записаться на прием
+    background: #0DBC91;
+    border-radius: 20px;        
+    width: 196px;
+    height: 43px;
+    color: #fff;
+    border:none;
+    font-size: 14px;
+    cursor: pointer;
+    &-more{//подробнее
+        background: #E2F0EF;
+        border: 1px solid #0DBC91;
+        color: #0DBC91;
+    }
+}
+// меню   
+.nav{
+    @media (max-width:430px){
+        display: none;
+    }
+    background-color: #1FA181;
+    height: 43px;
+    
+    &__items{
+        display:flex;
+        justify-content: flex-start;
+        gap:2vw;
+        
+    }
+        &__item{
+            font-size: 16px;
+            a{
+                color: #fff;
+            }
+        }
+}
+//Мобильное отображение со своей собственной структурой
+.header_mobile{
+    display: none;
+    @media (max-width:430px){
+        display: block;
+        .container{
+            @include flex_row_between(0);
+        }
+    }
+    .wrap_logo{//Бургер c логотипом
+        @include flex_row_between(10vw);
+        justify-content: center;
+        place-items: center;
+        .burger{ 
+            display: block;
+            height: 34px;
+            width: 34px;
+            padding-top: 5px;
+            span{
+                display: block;
+                height: 4px;
+                transition: all .3s linear;
+                margin-bottom: 7px;
+                background-color: #1FA181;
+                }
+            &-active{
+                span:nth-child(1){
+                    transform: rotate(45deg);
+                    position: relative;
+                    top: 8px;
+                    transition: all .3s linear;
+                    }
+                span:nth-child(2) {
+                        opacity: 0;
+                        transition: all .3s linear;
+                    }    
+                span:nth-child(3) {
+                        transform: rotate(-45deg);
+                        position: relative;
+                        top: -13px;
+                        transition: all .3s linear;
+                    }    
+            }    
+        }
+       
+    }
+    .wrap_sity{//город и телефон
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .contacts_link{
+            font-size: 16px;
+            font-family: CaptionBold;
+            color: $color;
+        }
+        .contacts_sity{
+            font-size: 13px;
+            color: $color;
+        }
+       
+    }
+    
+}
+// Выежающее меню
+nav.nav_mobile{
+    display: none;
+    @media (max-width:430px){
+        padding: 50px 0 0 20px;
+        transition: all .3s linear;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(69, 146, 127, 0.9);
+        position: fixed;
+        opacity: .9;
+        z-index: 3;
+        left: -450px;
+        &-active{
+            left: 0;
+            transition: all .3s linear;
+           
+        }
+    }
+    .nav_mobile__items{
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+    }
+        .nav_mobile__item{
+                a{
+                    color: #fff;
+                    font-size: 16px;
+                }
+                
+            }
+        .button__signup_mobile{
+            background: #fff;
+            border-radius: 20px;
+            width: 196px;
+            height: 43px;
+            color: #1FA181;
+            border: none;
+            font-size: 14px;
+            font-family: CaptionBold;
+            margin-top: 45px;
+          }    
+}
+
